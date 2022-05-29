@@ -10,7 +10,7 @@ const express = require('express');
 const { createServer } = require('http');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
 const depthLimit = require('graphql-depth-limit');
-
+const cors = require('cors');
 
 (async function () {
     const app = express();
@@ -46,6 +46,7 @@ const depthLimit = require('graphql-depth-limit');
     });
     await server.start();
     server.applyMiddleware({ app });
+    app.use(cors());
 
     // eslint-disable-next-line no-undef
     const PORT = process.env.PORT;
