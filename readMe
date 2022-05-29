@@ -1,0 +1,10 @@
+Things that need to know.
+
+Create and Put it to .env file.
+
+PORT=4000
+JWT_SECRET=zaqwsxcderfvbgtyhnjumik
+TOKEN_EXPIRES_AFTER=3600000
+
+
+Use playground for testing an api's  http://localhost:4000/graphql
